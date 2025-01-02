@@ -1,0 +1,114 @@
+Enter a command: help
+
+help
+	Output a summary of all available commands
+addflight <origin> <destination> <departureHour> <departureHour> <duration (min)> <distance>
+	Add a flight with the specified properties
+addpassenger <lastName> <firstName (optional)>
+	Add a passenger with the specified name(s) to the customer database
+reserveflight <flightID> <passengerID>
+	Add a passenger with ID passengerID to a flight with ID <flightID>
+cancelreservation <flightID> <passengerID>
+	Remove a passenger with ID <passengerID> from a flight with ID <flightID>
+countflights
+	Return the total number of ConAir flights
+countseats
+	Return the total number of occupied seats on all ConAir flights
+countpassengers
+	Return the number of unique passengers on all ConAir flights
+listflights
+	Return the list of ConAir flights
+listpassengers
+	Return the list of unique passengers on all ConAir flights
+checkbadlayover
+	Check if a given passenger is on ConAir flights insufficient layover times
+frequentfliers
+	Return the number of frequent fliers on ConAir flights
+exit
+	Exit the program
+
+Enter a command: addflight SYR ORD 3 45 120 400
+ConAir now manages a flight from SYR to ORD departing at 3:45 AM with a flight time of 120 minutes and a distance of 400 miles.
+Enter a command: addflight ITH NYC 6 33 45 175
+ConAir now manages a flight from ITH to NYC departing at 6:33 AM with a flight time of 45 minutes and a distance of 175 miles.
+Enter a command: countflights
+ConAir manages 2 flights.
+Enter a command: listflights
+ConAir manages these flights:
+{
+0: Flight{Origin City: 'SYR', Destination City: 'ORD', Departure Minute: 225, Duration (mins): 120, Distance (miles): 400}
+1: Flight{Origin City: 'ITH', Destination City: 'NYC', Departure Minute: 393, Duration (mins): 45, Distance (miles): 175}
+}
+Enter a command: countseats
+The total number of filled seats in all ConAir scheduled flights is: 0
+Enter a command: addpassenger Cryolophosaurus Crystal
+Successfully added Cryolophosaurus,Crystal to ConAir's database.
+Enter a command: addpassenger Raptorex Reggie
+Successfully added Raptorex,Reggie to ConAir's database.
+Enter a command: addpassenger Pteranodon Buddy
+Successfully added Pteranodon,Buddy to ConAir's database.
+Enter a command: addpassenger Pteranodon Tiny
+Successfully added Pteranodon,Tiny to ConAir's database.
+Enter a command: addpassenger Ankylosaurus Hank
+Successfully added Ankylosaurus,Hank to ConAir's database.
+Enter a command: addpassenger Buddy
+Successfully added Buddy to ConAir's database.
+Enter a command: countpassengers
+The number of unique ConAir passengers is: 6
+Enter a command: countseats
+The total number of filled seats in all ConAir scheduled flights is: 0
+Enter a command: listpassengers
+The list of unique ConAir passengers:
+{
+0: Cryolophosaurus,Crystal
+1: Raptorex,Reggie
+2: Pteranodon,Buddy
+3: Pteranodon,Tiny
+4: Ankylosaurus,Hank
+5: Buddy
+}
+Enter a command: reserveflight 0 0
+Passenger: Cryolophosaurus,Crystal was successfully added to Flight 0: Flight{Origin City: 'SYR', Destination City: 'ORD', Departure Minute: 225, Duration (mins): 120, Distance (miles): 400}
+Enter a command: reserveflight 0 1
+Passenger: Raptorex,Reggie was successfully added to Flight 0: Flight{Origin City: 'SYR', Destination City: 'ORD', Departure Minute: 225, Duration (mins): 120, Distance (miles): 400}
+Enter a command: reserveflight 0 3
+Passenger: Pteranodon,Tiny was successfully added to Flight 0: Flight{Origin City: 'SYR', Destination City: 'ORD', Departure Minute: 225, Duration (mins): 120, Distance (miles): 400}
+Enter a command: reserveflight 0 4
+Passenger: Ankylosaurus,Hank was successfully added to Flight 0: Flight{Origin City: 'SYR', Destination City: 'ORD', Departure Minute: 225, Duration (mins): 120, Distance (miles): 400}
+Enter a command: reserveflight 1 2
+Passenger: Pteranodon,Buddy was successfully added to Flight 1: Flight{Origin City: 'ITH', Destination City: 'NYC', Departure Minute: 393, Duration (mins): 45, Distance (miles): 175}
+Enter a command: reserveflight 1 4
+Passenger: Ankylosaurus,Hank was successfully added to Flight 1: Flight{Origin City: 'ITH', Destination City: 'NYC', Departure Minute: 393, Duration (mins): 45, Distance (miles): 175}
+Enter a command: countseats
+The total number of filled seats in all ConAir scheduled flights is: 6
+Enter a command: frequentfliers
+There are 0 frequent fliers on ConAir flights.
+Enter a command: checkbadlayover 3 2
+Passenger: Pteranodon,Tiny has sufficient layover between flights.
+Enter a command: cancelreservation 1 2
+Flights: true
+Passengers: true
+Passenger: Pteranodon,Buddy was successfully removed from Flight: Flight{Origin City: 'ITH', Destination City: 'NYC', Departure Minute: 393, Duration (mins): 45, Distance (miles): 175}
+Enter a command: countseats
+The total number of filled seats in all ConAir scheduled flights is: 5
+Enter a command: countpassengers
+The number of unique ConAir passengers is: 6
+Enter a command: listpassengers
+The list of unique ConAir passengers:
+{
+0: Cryolophosaurus,Crystal
+1: Raptorex,Reggie
+2: Pteranodon,Buddy
+3: Pteranodon,Tiny
+4: Ankylosaurus,Hank
+5: Buddy
+}
+Enter a command: countflights
+ConAir manages 2 flights.
+Enter a command: listflights
+ConAir manages these flights:
+{
+0: Flight{Origin City: 'SYR', Destination City: 'ORD', Departure Minute: 225, Duration (mins): 120, Distance (miles): 400}
+1: Flight{Origin City: 'ITH', Destination City: 'NYC', Departure Minute: 393, Duration (mins): 45, Distance (miles): 175}
+}
+Enter a command: exit

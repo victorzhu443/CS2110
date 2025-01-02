@@ -1,0 +1,31 @@
+help
+addflight SYR ORD 3 45 120 400
+addflight ITH NYC 6 33 45 175
+countflights
+listflights
+countseats
+addpassenger Cryolophosaurus Crystal
+addpassenger Raptorex Reggie
+addpassenger Pteranodon Buddy
+addpassenger Pteranodon Tiny
+addpassenger Ankylosaurus Hank
+addpassenger Buddy
+countpassengers
+countseats
+listpassengers
+reserveflight 0 0
+reserveflight 0 1
+reserveflight 0 3
+reserveflight 0 4
+reserveflight 1 2
+reserveflight 1 4
+countseats
+frequentfliers
+checkbadlayover 3 2
+cancelreservation 1 2
+countseats
+countpassengers
+listpassengers
+countflights
+listflights
+exit
