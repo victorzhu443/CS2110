@@ -16,5 +16,5 @@ https://www.cs.cornell.edu/courses/cs2110/2024fa/assignments/a4_handout.html
 a5:
 https://www.cs.cornell.edu/courses/cs2110/2024fa/assignments/a5_handout.html
 
-\n a6:
+a6:
 https://www.cs.cornell.edu/courses/cs2110/2024fa/assignments/a6_handout.html
